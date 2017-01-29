@@ -1,0 +1,505 @@
+/* Import font face */
+@font-face {
+  font-family: 'Lato-Requler';
+  src: url('../font/Lato-Reguler.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('../font/Lato-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../font/Lato-Bold.ttf');
+}
+
+@font-face{
+  font-family: 'BebasNeue-Reguler';
+  src: url('../font/BebasNeue-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'CaviarDreams-Reguler';
+  src: url('../font/CaviarDreams.ttf');
+}
+
+/* Default setting for font size, font family, bg color and text-align */
+body{
+  font-size: 15px;
+  font-family: 'CaviarDreams-Reguler';
+  background-color: lightblue;
+}
+
+section{
+  text-align: center;
+}
+
+/*set color for header and footer */
+#header,#footer{
+  background-color: #0a1a2e;
+}
+
+/*set padding for sections*/
+#category,#winner,#winner-profile,#about,#footer,#rule,#timeline{
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/*css for title section font*/
+.section-title,.content-title,.theme-title{
+  font-family: 'BebasNeue-Reguler';
+  font-weight: normal;
+}
+
+#about,#form-header,#form,#succes-content{
+  color: black;
+}
+
+a{
+  color: #6C7A89;
+  text-decoration: underline;
+}
+
+/*css for header ifest */
+.header-text{
+  font-family: 'BebasNeue-Reguler';
+  display: inline-block;
+  color: white;
+  font-size: 32px;
+  padding-top: 20px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.ifest-logo{
+  display: inline-block;
+  width: 50px;
+}
+
+/*css for menu bar */
+#menu{
+  z-index: 11;
+  top:0px;
+  width:100%;
+  background-color: #2980b9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#menu .logo{
+  float: left;
+}
+
+.i2c-logo{
+  width: 50px;
+}
+
+.navigation{
+  float: right;
+}
+
+.nav{
+  margin-bottom: 0px;
+  display:inline-block;
+}
+
+.text-link{
+  color: white;
+  font-size: 7px;
+}
+
+.menu-link{
+  margin-left: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.navigation>ul{
+  padding-top: 8px;
+  margin-bottom: 0px;
+}
+
+.dropdown{
+  display: none;
+}
+
+ul.dropdown-list{
+  display: none;
+}
+
+.dropdown-nav{
+  display: block;
+  float: right;
+}
+
+#dropdown{
+  float: right;
+}
+
+#dropdown>img{
+  width: 25px;
+  margin-top: 12px;
+}
+
+
+/*css for theme section */
+#theme{
+  padding-top: 80px;
+  padding-bottom: 150px;
+  background-image: url('../main-background.png');
+  background-size: cover;
+  background-position: center;
+  background-position-y: -150px;
+}
+
+.theme-logo{
+  width: 280px;
+}
+
+.theme-title{
+  color: white;
+}
+
+/*css for about section */
+#about{
+  background-color: #C5EFF7;
+  padding-top: 20px;
+}
+
+.section-title{
+  color: white;
+}
+
+.content-title{
+  text-align: center;
+}
+
+.content-box{
+  padding-top: 10px;
+}
+
+.content-text{
+  text-indent: 50px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+/*css for winner section */
+#winner{
+  background-color: #22313F;
+}
+
+.circle{
+  display: inline-block;
+  border-radius: 50%;
+  font-weight:lighter;
+  border: 5px solid
+}
+
+.big{
+  width: 100%;
+  height:100%;
+}
+
+.four>.big{
+  width: 70%;
+}
+
+.category-img{
+  margin-top: 35px;
+  width: 130px;
+}
+
+.gold{
+  color: gold;
+  border: 5px solid gold;
+}
+
+.silver{
+  color: silver;
+  border: 5px solid silver;
+}
+
+.bronze{
+  color: #E87E04;
+  border: 5px solid #E87E04;
+}
+
+.trophy{
+  margin-top: 15px;
+  width: 150px;
+}
+
+#winner p{
+  padding-top: 30px;
+}
+/*css for category section */
+#category{
+  background-color: #446CB3;
+}
+
+#category p{
+  color: white;
+}
+
+#category h4{
+  padding-top: 30px;
+  color: white;
+}
+
+.small{
+  margin: auto;
+  width: 220px;
+  height:220px;
+}
+
+.category-btn{
+  background-color: #F9BF3B;
+  border: 2px solid #EB9532;
+}
+
+.pop-up{
+    display:none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.pop-up > .content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+}
+
+ol>li{
+  text-align: left;
+}
+
+/*css for winner-profile section */
+#winner-profile{
+  background-color: #4183D7;
+}
+
+#winner-profile .flexslider{
+  background: transparent;
+  border: 0px;
+}
+
+.flexslider h4{
+  color: white;
+  text-align: left;
+}
+
+.slider-content{
+  text-align: justify;
+  color: white;
+  font-size: 16px;
+}
+
+/*css for registration section */
+#registration{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url('../main-background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.registration-btn{
+  text-decoration: none;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 36px;
+  background-color: #F9BF3B;
+  border: 2px solid #EB9532;
+  margin: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: content-box;
+  font-weight: normal;
+}
+
+.registration-btn:hover{
+  color: black;
+}
+
+/*css for timeline section */
+#timeline{
+  padding-bottom: 0px;
+}
+#timeline h1{
+  color: black;
+}
+
+.cd-timeline-content>p,.cd-timeline-content>.cd-read-more,.cd-timeline-content>.cd-date,.cd-timeline-content>h2{
+  font-size: 100%;
+}
+
+.cd-timeline-content>.cd-date{
+  font-weight: bolder;
+  font-size: 30px;
+  color: black;
+  padding-top: 0px;
+}
+
+.cd-timeline-content .cd-date {
+  left: 106%;
+}
+
+/*css for rule section */
+#rule{
+  background-color: #2C3E50;
+}
+
+/*css for footer */
+.icon-img{
+  width: 50px;
+}
+
+/*css for flexslider */
+.flex-direction-nav a{
+  line-height: 40px;
+}
+
+.flexslider li{
+  margin-bottom: 0px;
+}
+
+button{
+  height: auto;
+}
+
+/*form-header section*/
+#form-header{
+  font-size: 13px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.breadcrumb-list>li{
+  display: inline-block;
+  list-style:none;
+}
+
+.breadcrumb-list{
+  display: block;
+  float: right;
+}
+
+.form-title{
+  display: block;
+  float: left;
+  font-size: 30px;
+}
+
+.form-row>label{
+  text-align: left;
+}
+
+.form-box{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-row>input[type="password"],.form-row>input[type="text"]{
+  width:100%;
+}
+
+.form-row{
+  text-align: left;
+}
+
+.atma-trailer-member{
+  display: none;
+}
+
+.term-service{
+  margin-left: 50px;
+}
+
+/*css for succes content section*/
+#succes-content{
+  padding-top: 20px;
+  padding-bottom: 200px;
+}
+
+
+@media screen and (max-width: 549px) {
+  .four>.big,.big{
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 749px) {
+  .i2c-logo{
+    width: 75px;
+  }
+  nav{
+    display: none;
+  }
+  .dropdown{
+    display: block;
+  }
+  .dropdown-nav{
+    width: 100%;
+    float: left;
+  }
+  .dropdown-list{
+    float: right;
+  }
+  .text-link{
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 749px,max-width: 767px) {
+  .i2c-logo{
+    width: 35px;
+  }
+  .navigation>ul{
+    padding-top: 0px;
+  }
+}
+
+@media screen and (min-width: 821px) {
+  .text-link{
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .text-link{
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 996px) {
+  .text-link{
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1051px) {
+  .text-link{
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 1139px) {
+  .text-link{
+    font-size: 12px;
+  }
+}

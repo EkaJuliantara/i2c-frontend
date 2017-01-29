@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="author" content="Adhyaksa Jaya">
+    	<meta name="description" content="Informatics Innovative Contest - Universitas Atma Jaya Yogyakarta">
+	<title>Pendaftaran Berhasil! - Informatics Innovative Contest</title>
+	<link rel="stylesheet" href="http://ifest-uajy.com/upc/style.css" type="text/css" media="all">
+	<link rel="stylesheet" href="http://ifest-uajy.com/upc/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+    	<link rel="stylesheet" href="http://ifest-uajy.com/upc/assets/fullPage/jquery.fullPage.css" type="text/css" media="all">
+    	<link rel="stylesheet" href="http://ifest-uajy.com/upc/style.css" type="text/css" media="all">
+    	<script type="text/javascript" src="http://ifest-uajy.com/upc/assets/jquery-1.11.3.min.js"></script>
+    	<script type="text/javascript" src="http://ifest-uajy.com/upc/assets/bootstrap/js/bootstrap.min.js"></script>
+    	<script type="text/javascript" src="http://ifest-uajy.com/upc/assets/fullPage/jquery.fullPage.min.js"></script>
+    	<script type="text/javascript">
+	        var isPhoneDevice = "ontouchstart" in document.documentElement;
+	        $(document).ready(function() {
+	            if (isPhoneDevice || screen.width <= 768) {
+	                $('.fullpage').fullpage({
+	                    css3: true,
+	                    autoScrolling: false,
+	                    fitToSection: false
+	                });
+	            } else {
+	                $('.fullpage').fullpage({
+	                    css3: true,
+	                    menu: 'navigation'
+	                });
+	            }
+	        });
+    	</script>
+</head>
+<body>
+	<section class="fullpage">
+		<div class="section register">
+			<div class="container">
+				<h2 class="section-title">Pendaftaran Berhasil!<h2>
+				<p align="center">Untuk mengedit data kepesertaan, silakan ikuti link di bawah ini:</p>
+				<center><a href="http://regsys.ifest-uajy.com/i2c/client/login" class="btn btn-success">Login</a>
+			</div>
+		</div>
+	</section>
+</body>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>I2C</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--Skeleton -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <!--Flexlide -->
+  <link rel="stylesheet" href="bower_components/flexslider/flexslider.css">
+  <!--Vertical-Timeline-->
+  <link rel="stylesheet" href="vertical-timeline/css/style.css">
+  <!--FancyBox-->
+  <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <!--Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <a href="#">
+    <section id="header">
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
+            <div class="ifest-header">
+              <img class="ifest-logo" src="logo-ifest.png" alt="" />
+              <h1 class="header-text">Informatics Festival</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </a>
+
+  <section id="menu">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+            <a href="#header" class="logo">
+                <img class="i2c-logo" src="img/logo.png" alt="" />
+            </a>
+            <nav class="navigation">
+                <ul>
+                  <li class="nav"><a class="menu-link" href="#about"><span class="text-link">TENTANG I2C</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#category"><span class="text-link">KETENTUAN VIDEO</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#rule"><span class="text-link">KETENTUAN LOMBA</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#winner"><span class="text-link">HADIAH</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#timeline"><span class="text-link">JADWAL</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#winner-profile"><span class="text-link">PEMENANG TAHUN LALU</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#registration"><span class="text-link">PENDAFTARAN</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#"><span class="text-link">AREA PESERTA</span></a></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <button type="button" name="button" id="dropdown"><img src="img/menu-icon.png" alt=""></button>
+                <ul class="dropdown-list">
+                  <li class="dropdown-nav"><a class="menu-link" href="#about"><span class="text-link">TENTANG I2C</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#category"><span class="text-link">KETENTUAN VIDEO</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#rule"><span class="text-link">KETENTUAN LOMBA</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#winner"><span class="text-link">HADIAH</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#timeline"><span class="text-link">JADWAL</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#winner-profile"><span class="text-link">PEMENANG TAHUN LALU</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#registration"><span class="text-link">PENDAFTARAN</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#"><span class="text-link">AREA PESERTA</span></a></li>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="theme">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+            <img class="theme-logo" src="img/logo.png" alt="" />
+            <br>
+            <h1 class="theme-title">Informatics Innovative Contest</h1>
+            <a href="form.html"><button class="registration-btn" type="button" name="button" href="form.html">Pendaftaran</button></a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="content-title">TENTANG I2C</h2>
+    <div class="container">
+        <div class="row">
+          <div class="six columns">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <a class="fancy-img" href="gallery/a.jpg"><img src="gallery/a-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/b.jpg"><img src="gallery/b-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/c.jpg"><img src="gallery/c-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/d.jpg"><img src="gallery/d-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/e.jpg"><img src="gallery/e-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/f.jpg"><img src="gallery/f-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/g.jpg"><img src="gallery/g-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/h.jpg"><img src="gallery/h-sm.jpg" alt="" /></a>
+                </li>
+                <li>
+                  <a class="fancy-img" href="gallery/i.jpg"><img src="gallery/i-sm.jpg" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <div class="six columns">
+              <div class="content-box">
+                <p class="content-text">
+                  I2C adalah Informatics Innovative Contest. Di I2C sendiri dibagi menjadi 2 jenis perlombaan untuk diikuti, yaitu Trailer dan Ide Aplikasi. Lomba pembuatan trailer yang diperuntukkan seluruh mahasiswa Universitas Atma Jaya Yogyakarta. dan Ide Aplikasi yang di perlombakan untuk seluruh siswa SMA/SMK sederajat se-DIY dan Jawa Tengah.
+                </p>
+                <p class="content-text">
+                  Pada IFEST #5 ini, I2C memiliki 2 kategori lomba, yaitu Trailer Universitas Atma Jaya dan Short Movie. Di sini mahasiswa UAJY diajak untuk mengeluarkan ide-idenya untuk membuat aplikasi mobile yang baru, di mana ide-ide itu akan dipresentasikan dalam bentuk video. Acara ini bisa diikuti oleh semua mahasiswa Teknik Informatika UAJY.
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+<section id="category">
+  <div class="container">
+    <h1 class="section-title">Kategori Lomba</h1>
+    <div class="row">
+        <div class="six columns">
+            <div class="circle small">
+              <img class="category-img" src="img/film.png" alt="">
+            </div>
+            <h4>Video Ide Bisnis</h4>
+            <p>
+              ............. <br>
+              ............. <br>
+            </p>
+            <button id="ide-bisnis" class="category-btn" type="button" name="button">Ketentuan</button>
+            <div id="ide-bisnis" class="pop-up">
+                <div class="content">
+                    <h2>Ketentuan Video Ide Bisnis</h2>
+                    <ol>
+                      Coming Soon
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="six columns">
+            <div class="circle small">
+              <img class="category-img" src="img/atma.png" alt="">
+            </div>
+            <h4>Trailer UAJY</h4>
+            <p>
+              ............. <br>
+              ............. <br>
+            </p>
+            <button id="atma-trailer" class="category-btn" type="button" name="button">Ketentuan</button>
+            <div id="atma-trailer" class="pop-up">
+                <div class="content">
+                    <h2>Ketentuan Atma Trailer</h2>
+                    <ol>
+                      Coming Soon
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section id="rule">
+    <h1 class="section-title">Ketentuan Lomba</h1>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="winner" class="ide-bisnis">
+  <div class="container">
+    <h1 class="section-title">Juara Ide Bisnis</h1>
+    <h2 class="section-title">Total Hadiah : Rp 3.500.000</h2>
+    <div class="row">
+      <div class="four columns">
+        <div class="circle gold big">
+          <img class="trophy" src="img/gold.png" alt="">
+        </div>
+        <p>
+          Juara 1 <br>
+          Sertifikat <br>
+          Uang Tunai Rp 1.250.000,-
+        </p>
+      </div>
+      <div class="four columns">
+        <div class="circle silver big">
+          <img class="trophy" src="img/silver.png" alt="">
+        </div>
+        <p>
+          Juara 2 <br>
+          Sertifikat <br>
+          Uang Tunai Rp 1.000.000,-
+        </p>
+      </div>
+      <div class="four columns">
+        <div class="circle bronze big">
+          <img class="trophy" src="img/bronze.png" alt="">
+        </div>
+        <p>
+          Juara 3 <br>
+          Sertifikat <br>
+          Uang Tunai Rp 750.000,-
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="winner" class="atma-trailer">
+  <div class="container">
+    <h1 class="section-title">Juara Trailer Atma</h1>
+    <h2 class="section-title">Total Hadiah : Rp 4.250.000</h2>
+    <div class="row">
+        <div class="three columns">
+          <div class="circle gold big">
+            <img class="trophy" src="img/gold.png" alt="">
+          </div>
+          <p>
+            Juara 1 <br>
+            Sertifikat <br>
+            Uang Tunai Rp 1.250.000,-
+          </p>
+        </div>
+        <div class="three columns">
+          <div class="circle silver big">
+            <img class="trophy" src="img/silver.png" alt="">
+          </div>
+          <p>
+            Juara 2 <br>
+            Sertifikat <br>
+            Uang Tunai Rp 1.000.000,-
+          </p>
+        </div>
+        <div class="three columns">
+          <div class="circle bronze big">
+            <img class="trophy" src="img/bronze.png" alt="">
+          </div>
+          <p>
+            Juara 3 <br>
+            Sertifikat <br>
+            Uang Tunai Rp 750.000,-
+          </p>
+        </div>
+        <div class="three columns">
+          <div class="circle bronze big">
+            <img class="trophy" src="img/bronze.png" alt="">
+          </div>
+          <p>
+            Juara Favorit <br>
+            Sertifikat <br>
+            Uang Tunai Rp 750.000,-
+          </p>
+        </div>
+    </div>
+</section>
+
+<section id="timeline">
+  <h1 class="section-title">Jadwal</h1>
+  <section id="cd-timeline" class="cd-container">
+    <div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="vertical-timeline/img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Pendaftaran Online</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<span class="cd-date">11 Februari - 15 April 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="vertical-timeline/img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Batas Akhir Pengumpulan Video</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<span class="cd-date">21 April 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="vertical-timeline/img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Pengumuman Finalis</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<span class="cd-date">24 April - 8 Mei 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="vertical-timeline/img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Presentasi Finalis</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<span class="cd-date">10 Mei 2017</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+  </section>
+</section>
+
+<section id="winner-profile">
+    <h1 class="section-title">Profil Pemenang Tahun Lalu</h1>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+              <div class="flexslider">
+                <ul class="slides">
+                  <li class="row">
+                    <div class="six columns">
+                        <iframe width="460" height="300" src="https://www.youtube.com/embed/S5RF4zvvJ94?list=PLLdD0sAtlS8iXAzKv01opIYwZfOGhkV9p" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="six columns">
+                      <h4>Description 1</h4>
+                      <p class="slider-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+                    </div>
+                  </li>
+                  <li class="row">
+                    <div class="six columns">
+                        <iframe width="460" height="300" src="https://www.youtube.com/embed/y_-4iulDC8M?list=PLLdD0sAtlS8iXAzKv01opIYwZfOGhkV9p" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="six columns">
+                        <p class="slider-content">Description 2</p>
+                    </div>
+                  </li>
+                  <li class="row">
+                    <div class="six columns">
+                        <iframe width="460" height="300" src="https://www.youtube.com/embed/7mya96Iw36g?list=PLLdD0sAtlS8iXAzKv01opIYwZfOGhkV9p" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="six columns">
+                        <p class="slider-content">Description 3</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+</section>
+
+<section id="registration">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <a href="form.html" id="registration-form" class="registration-btn">Daftar Sekarang</a>
+              </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="six columns">
+                <h2>Contact Person</h2>
+                <p>+62 817 5066 108 (Andreas)</p>
+                <p>+62 878 3992 2155 (Dio)</p>
+            </div>
+            <div class="six columns">
+                <h2>Follow Us</h2>
+                <img class="icon-img" src="img/line-icon.png" alt="">
+                <img class="icon-img" src="img/ig-icon.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="vertical-timeline/js/main.js"></script>
+<script type="text/javascript" src="vertical-timeline/js/modernizr.js"></script>
+<script type="text/javascript" src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="bower_components/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+
+</body>
+</html>
