@@ -70,6 +70,9 @@ $(document).ready(function() {
   $("#dropdown").on('click',function(){
     $("ul.dropdown-list").slideToggle();
   });
+  $("ul.dropdown-list").on('click',function(){
+    $("ul.dropdown-list").slideToggle();
+  });
 
 
   /*
