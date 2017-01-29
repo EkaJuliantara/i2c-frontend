@@ -106,7 +106,7 @@ a{
 
 .text-link{
   color: white;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .menu-link{
@@ -443,7 +443,7 @@ button{
 }
 
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 890px) {
   .i2c-logo{
     width: 75px;
   }
@@ -465,7 +465,7 @@ button{
   }
 }
 
-@media screen and (min-width: 749px,max-width: 767px) {
+@media screen and (min-width: 749px,max-width: 890px) {
   .i2c-logo{
     width: 35px;
   }
@@ -474,17 +474,6 @@ button{
   }
 }
 
-@media screen and (min-width: 821px) {
-  .text-link{
-    font-size: 8px;
-  }
-}
-
-@media screen and (min-width: 890px) {
-  .text-link{
-    font-size: 9px;
-  }
-}
 
 @media screen and (min-width: 996px) {
   .text-link{
