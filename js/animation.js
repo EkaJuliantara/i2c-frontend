@@ -51,7 +51,7 @@ $(document).ready(function() {
   });
 
 
-  window.sr = ScrollReveal().reveal('#theme .container,#about .container,#category .container,#rule .container,#winner .container,#timeline,#registration .container,#footer .container,.section-title,.content-title,#form',{ reset: true });
+  window.sr = ScrollReveal().reveal('#theme .container,#about .content-title,#about .content-box,#category .container,#rule .container,#winner .container,#timeline,#registration .container,#footer .container,.section-title,.content-title,#form',{ reset: true });
 
   $('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
