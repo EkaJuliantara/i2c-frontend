@@ -1,0 +1,14 @@
+.box{
+  padding-top: 6px;
+  margin-top: 50px;
+  border: 1px solid lightgray;
+}
+
+.box-header{
+  padding-left: 8px;
+  border-bottom: 1px solid lightgray;
+}
+
+.box-body{
+  padding-left: 8px;
+}
