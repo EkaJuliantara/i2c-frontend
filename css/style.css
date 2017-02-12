@@ -150,7 +150,6 @@ ul.dropdown-list{
   background-image: url('../main-background.png');
   background-size: cover;
   background-position: center;
-  background-position-y: -150px;
 }
 
 .theme-logo{
