@@ -61,4 +61,13 @@ $(document).ready(function() {
     type:'inline',
     midClick: true
   });
+
+  $(".radio-category").change(function(){
+    if($(this).val()=="Ide Aplikasi"){
+        $("#school-form").css({'display':'block'});
+    }
+    else {
+        $("#school-form").css({'display':'none'});
+    }
+  })
 });
