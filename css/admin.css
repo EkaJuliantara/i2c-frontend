@@ -1,7 +1,77 @@
+/* Import font face */
+@font-face {
+  font-family: 'Lato-Requler';
+  src: url('../font/Lato-Reguler.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('../font/Lato-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../font/Lato-Bold.ttf');
+}
+
+@font-face{
+  font-family: 'BebasNeue-Reguler';
+  src: url('../font/BebasNeue-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'CaviarDreams-Reguler';
+  src: url('../font/CaviarDreams.ttf');
+}
+
+/* Default setting for font size, font family, bg color and text-align */
+body{
+  font-size: 15px;
+  font-family: 'CaviarDreams-Reguler';
+}
+
+section{
+  text-align: center;
+}
+
+/*Css for header section */
+#header{
+  background-color: lightblue;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.i2c-logo{
+  float: left;
+  width: 50px;
+}
+
+.btn{
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.logout{
+  color: white;
+  background-color: #F22613;
+  float: right;
+}
+
+.update{
+  float: left;
+}
+
 .box{
+  border-radius: 10px;
   padding-top: 6px;
   margin-top: 50px;
   border: 1px solid lightgray;
+  padding-bottom: 8px;
 }
 
 .box-header{
