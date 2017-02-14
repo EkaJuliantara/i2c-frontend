@@ -364,6 +364,8 @@ ol>li{
 
 button{
   height: auto;
+  background: #2980b9;
+  color: #fff;
 }
 
 /*form-header section*/
@@ -393,12 +395,12 @@ button{
 }
 
 .form-box{
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 75%;
+  /*ekajul margin-left: auto;
+  margin-right: auto;*/
 }
 
-.form-row>input[type="password"],.form-row>input[type="text"]{
+.form-row>input[type="password"],.form-row>input[type="text"],.form-row>input[type="email"]{
   width:100%;
 }
 
@@ -420,6 +422,11 @@ button{
   padding-bottom: 200px;
 }
 
+
+span.error-msg {
+  margin-bottom: 15px;
+  display: block;
+}
 
 @media screen and (max-width: 549px) {
   .four>.big,.big{
