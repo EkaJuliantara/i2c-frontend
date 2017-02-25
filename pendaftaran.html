@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>I2C</title>
+  <title>I2C - Pendaftaran</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -124,17 +124,17 @@
                         </div>
                         <div class="form-row">
                             <label>Kategori Lomba</label>
-                            <!--ekajul<div class="form-row">
-                               <input class="radio-category" type="radio" name="category" value="1" checked>Ide Aplikasi
-                            </div>-->
                             <div class="form-row">
-                               <input class="radio-category" type="radio" name="i2c_category_id" value="2" checked required="">Atma Trailer
+                               <input ng-model="formData.i2c_category_id" class="radio-category" type="radio" name="i2c_category_id" value="1" required="">Ide Aplikasi
+                            </div>
+                            <div class="form-row">
+                               <input ng-model="formData.i2c_category_id" class="radio-category" type="radio" name="i2c_category_id" value="2" required="">Atma Trailer
                             </div>
                         </div>
-                        <!--<div class="form-row" id="school-form">
+                        <div ng-show="formData.i2c_category_id == 1" class="form-row">
                             <label>Asal Sekolah</label>
-                            <input ng-model="formData.origin" type="text" name="origin" value="" required="">
-                        </div>-->
+                            <input ng-model="formData.origin" type="text" name="origin" value="">
+                        </div>
                         <div class="form-row">
                             <button type="submit">{{ button }}</button>
                         </div>
@@ -195,14 +195,14 @@ registerApp.controller("registerCtrl", function($scope, $http, $window) {
 
   $scope.registerSubmit = function () {
 
-    $scope.formData['i2c_category_id'] = 2;
+    //$scope.formData['i2c_category_id'] = '2';
     $scope.errors = {};
 
     $scope.button = "MENDAFTAR..."
 
     $http({
       method  : 'POST',
-      url     : 'http://localhost:8000/v1/i2c',
+      url     : 'http://api.ifest-uajy.com/v1/i2c',
       data    : $.param($scope.formData),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
