@@ -70,16 +70,29 @@
             </a>
             <nav class="navigation">
                 <ul>
-                  <li class="nav"><a class="menu-link" href="index.html#about"><span class="text-link">TENTANG I2C</span></a></li>
-                  <li class="nav"><a class="menu-link" href="index.html#category"><span class="text-link">KATEGORI LOMBA</span></a></li>
-                  <!--ekajul <li class="nav"><a class="menu-link" href="index.html#rule"><span class="text-link">KETENTUAN LOMBA</span></a></li>-->
-                  <li class="nav"><a class="menu-link" href="index.html#winner"><span class="text-link">HADIAH</span></a></li>
-                  <li class="nav"><a class="menu-link" href="index.html#timeline"><span class="text-link">JADWAL</span></a></li>
-                  <!--ekajul <li class="nav"><a class="menu-link" href="index.html#winner-profile"><span class="text-link">PEMENANG TAHUN LALU</span></a></li>
-                  <li class="nav"><a class="menu-link" href="index.html#registration"><span class="text-link">PENDAFTARAN</span></a></li>
-                  <li class="nav"><a class="menu-link" href="#"><span class="text-link">AREA PESERTA</span></a></li>-->
+                  <li class="nav"><a class="menu-link" href="#about"><span class="text-link">TENTANG I2C</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#category"><span class="text-link">KATEGORI LOMBA</span></a></li>
+                  <!--ekajul<li class="nav"><a class="menu-link" href="#rule"><span class="text-link">KETENTUAN LOMBA</span></a></li>-->
+                  <li class="nav"><a class="menu-link" href="#winner"><span class="text-link">HADIAH</span></a></li>
+                  <li class="nav"><a class="menu-link" href="#timeline"><span class="text-link">JADWAL</span></a></li>
+                  <!--ekajul<li class="nav"><a class="menu-link" href="#winner-profile"><span class="text-link">PEMENANG TAHUN LALU</span></a></li>-->
+                  <li class="nav"><a class="menu-link" href="http://ifest-uajy.com/i2c/pendaftaran.html"><span class="text-link">PENDAFTARAN</span></a></li>
+                  <li class="nav"><a class="menu-link" href="http://ifest-uajy.com/i2c/area-peserta.php"><span class="text-link">AREA PESERTA</span></a></li>
                 </ul>
             </nav>
+            <div class="dropdown">
+                <button type="button" name="button" id="dropdown"><img src="img/menu-icon.png" alt=""></button>
+                <ul class="dropdown-list">
+                  <li class="dropdown-nav"><a class="menu-link" href="#about"><span class="text-link">TENTANG I2C</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#category"><span class="text-link">KATEGORI LOMBA</span></a></li>
+                  <!--ekajul<li class="dropdown-nav"><a class="menu-link" href="#rule"><span class="text-link">KETENTUAN LOMBA</span></a></li>-->
+                  <li class="dropdown-nav"><a class="menu-link" href="#winner"><span class="text-link">HADIAH</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="#timeline"><span class="text-link">JADWAL</span></a></li>
+                  <!--ekajul<li class="dropdown-nav"><a class="menu-link" href="#winner-profile"><span class="text-link">PEMENANG TAHUN LALU</span></a></li>-->
+                  <li class="dropdown-nav"><a class="menu-link" href="http://ifest-uajy.com/i2c/pendaftaran.html"><span class="text-link">PENDAFTARAN</span></a></li>
+                  <li class="dropdown-nav"><a class="menu-link" href="http://ifest-uajy.com/i2c/area-peserta.php"><span class="text-link">AREA PESERTA</span></a></li>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -109,7 +122,7 @@
                           <input ng-model="formData.password" type="password" name="password" value="" required="">
                       </div>
                       <div class="form-row">
-                          <button type="submit">{{ button }}</button>
+                          <button ng-disabled="button == 'MASUK...'" type="submit">{{ button }}</button>
                       </div>
                       <span ng-show="errors">{{ errors }}</span>
                   </form>
@@ -170,7 +183,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
 
     $scope.errors = "";
 
-    $scope.button = "MASUK..."
+    $scope.button = "MASUK...";
 
     $http({
       method  : 'POST',
@@ -181,7 +194,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
     .then(function(data) {
       if (data.data.status == 200) {
 
-        $scope.button = "MASUK..."
+        $scope.button = "MASUK...";
 
         $http({
           method  : 'POST',
