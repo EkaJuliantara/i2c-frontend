@@ -44,7 +44,8 @@ $(document).ready(function() {
   sr.reveal('#category .container');
   sr.reveal('#rule .container');
   sr.reveal('#winner .container');
-  sr.reveal('#timeline,#registration .container');
+  sr.reveal('#timeline');
+  sr.reveal('#registration .container');
   sr.reveal('.section-title');
   sr.reveal('#footer .container');
   sr.reveal('.content-title');
