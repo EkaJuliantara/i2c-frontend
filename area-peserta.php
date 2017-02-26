@@ -146,7 +146,7 @@
                         <a href="http://api.ifest-uajy.com/storage/media/{{ data.media_name }}" target="_blank">Lihat</a>
                       </td>
                       <td>
-                        <button ng-hide="hideMember == data.id" ng-click="hideMember = data.id" type="button" class="btn">Sunting</button> <button ng-show="hideMember == data.id" ng-click="updateMember(data); hideMember = false" type="button" class="btn">{{ btnUpdate }}</button> <button ng-click="destroyMember(data.id)" type="button" class="btn delete-member {{ data.id }}">Hapus</button>
+                        <button ng-hide="hideMember == data.id" ng-click="hideMember = data.id" type="button" class="btn">Sunting</button> <button ng-show="hideMember == data.id" ng-click="updateMember(data);" type="button" class="btn">{{ btnUpdate }}</button> <button ng-click="destroyMember(data.id)" type="button" class="btn delete-member {{ data.id }}">Hapus</button>
                       </td>
                     </tr>
                   </tbody>
@@ -510,7 +510,7 @@
 
     $scope.updateMember = function(data) {
 
-      $scope.btnUpdate = "Simpan";
+      $scope.btnUpdate = "Menyimpan...";
 
       $http({
         method  : 'PATCH',
@@ -519,6 +519,7 @@
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
       .then(function(data) {
+        $scope.hideMember = false;
         $scope.btnUpdate = "Simpan";
       });
     }
