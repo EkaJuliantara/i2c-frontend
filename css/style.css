@@ -33,6 +33,7 @@ body{
 
 section{
   text-align: center;
+  overflow: hidden;
 }
 
 /*set color for header and footer */
