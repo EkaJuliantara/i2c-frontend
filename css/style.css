@@ -439,6 +439,9 @@ span.error-msg {
   .content-text{
     font-size: 15px;
   }
+  .registration-btn{
+    font-size: 18px;
+  }
 }
 
 
