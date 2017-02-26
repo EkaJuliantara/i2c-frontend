@@ -44,9 +44,9 @@ $(document).ready(function() {
   sr.reveal('#category .container');
   sr.reveal('#rule .container');
   sr.reveal('#winner .container');
-  sr.reveal('#timeline');
+  sr.reveal('#timeline .cd-timeline-block');
   sr.reveal('#registration .container');
-  sr.reveal('.section-title');
+  //sr.reveal('.section-title');
   sr.reveal('#footer .container');
   sr.reveal('.content-title');
   sr.reveal('#form');
