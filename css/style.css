@@ -430,6 +430,7 @@ button{
   display: block;
       margin: auto;
       text-decoration: none;
+          width: 50%;
 }
 
 
