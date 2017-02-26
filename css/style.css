@@ -426,7 +426,7 @@ button{
   padding-bottom: 200px;
 }
 
-.reg-btn,.registration-btn {
+.registration-btn {
   display: block;
       margin: auto;
       text-decoration: none;
