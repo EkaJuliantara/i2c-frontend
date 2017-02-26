@@ -34,7 +34,21 @@ $(document).ready(function() {
     'overlayShow' : false
   });
 
-  window.sr = ScrollReveal().reveal('#theme .container,#about .content-title,#about .content-box,#category .container,#rule .container,#winner .container,#timeline,#registration .container,#footer .container,.section-title,.content-title,#form',{ reset: true });
+  //window.sr = ScrollReveal().reveal(',,,,,,,,,,',{ reset: true });
+
+  //ScrollReveal
+  window.sr = ScrollReveal({ reset: true });
+  sr.reveal('#theme .container');
+  sr.reveal('#about .content-title');
+  sr.reveal('#about .content-box');
+  sr.reveal('#category .container');
+  sr.reveal('#rule .container');
+  sr.reveal('#winner .container');
+  sr.reveal('#timeline,#registration .container');
+  sr.reveal('.section-title');
+  sr.reveal('#footer .container');
+  sr.reveal('.content-title');
+  sr.reveal('#form');
 
   $('a[href^="#"]:not(".ignore-hash")').on('click',function (e) {
 	    e.preventDefault();
