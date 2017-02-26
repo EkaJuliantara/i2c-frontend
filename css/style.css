@@ -426,6 +426,12 @@ button{
   padding-bottom: 200px;
 }
 
+.reg-btn,.registration-btn {
+  display: block;
+      margin: auto;
+      text-decoration: none;
+}
+
 
 span.error-msg {
   margin-bottom: 15px;
@@ -440,7 +446,7 @@ span.error-msg {
     font-size: 15px;
   }
   .registration-btn{
-    font-size: 12px;
+    font-size: 16px;
     width: 50%;
   }
 }
