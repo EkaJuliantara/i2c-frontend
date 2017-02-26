@@ -46,11 +46,11 @@
         <div class="row">
           <div class="eight columns">
             <div class="box">
-              <div class="box-header">
-                <h5>Data Tim</h5>
-              </div>
               <div class="box-body">
-                <form ng-submit="updateTeam()">
+
+              <div>
+                <h5>Data Tim</h5>
+                <form ng-show="dataTeamLoaded" ng-submit="updateTeam()">
                   <table>
                     <tr>
                       <th>Nama Tim</th>
@@ -75,11 +75,15 @@
                   </table>
                   <button type="submit" class="btn">{{ button }}</button>
                 </form>
+              
+                <p ng-hide="dataTeamLoaded">Sedang mengambil data dari server. Mohon tunggu sebentar ya...</p>
+                </div>
 
-                <hr>
+                <br>
 
+                <div ng-controller="dataDetailCtrl">
                 <h5>Detail</h5>
-                <table ng-controller="dataDetailCtrl" class="table">
+                <table ng-show="dataDetailsLoaded" class="table">
                   <thead>
                     <tr>
                       <th ng-show="categoryTeam == 1">
@@ -117,10 +121,14 @@
                   </tbody>
                 </table>
 
+                <p ng-hide="dataDetailsLoaded">Sedang mengambil data dari server. Mohon tunggu sebentar ya...</p>
+                </div>
+
                 <br>
 
+                <div ng-controller="dataMembersCtrl">
                 <h5>Data Anggota</h5>
-                <table ng-controller="dataMembersCtrl" class="table">
+                <table ng-show="dataMembersLoaded" class="table">
                   <thead>
                     <tr>
                       <th>Nama</th>
@@ -143,6 +151,10 @@
                     </tr>
                   </tbody>
                 </table>
+
+                <p ng-hide="dataMembersLoaded">Sedang mengambil data dari server. Mohon tunggu sebentar ya...</p>
+                </div>
+
               </div>
             </div>
           </div>
@@ -152,7 +164,8 @@
                 <h5>Pengumuman</h5>
               </div>
               <div class="box-body">
-                <p>Kecepatan koneksi internet mempengaruhi cepatnya data ditampilkan. Apabila data belum tertampil mohon bersabar.</p>
+                <p>Kecepatan koneksi internet mempengaruhi cepatnya data ditampilkan. Apabila data belum tertampil, silakan muat ulang halaman.</p>
+                <p>Kami menyarankan menggunakan browser Mozilla Firefox</p>
               </div>
             </div>
           </div>
@@ -180,11 +193,17 @@
     $scope.button = "Simpan";
     $scope.dataTeam = {};
 
+    $scope.dataTeamLoaded = 0;
+    $scope.dataMembersLoaded = 0;
+    $scope.dataDetailsLoaded = 0;
+
     $scope.getTeam = function() {
 
       $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam).then(function (response) {
 
+        $scope.dataTeamLoaded = 0;
         $scope.dataTeam = response.data.data;
+        $scope.dataTeamLoaded = 1;
         if ($scope.dataTeam.status == 0) {
           $scope.status = "Tidak Aktif";
         }else{
@@ -247,8 +266,10 @@
     }
 
     $scope.getDetail = function() {
+      $scope.dataDetailsLoaded = 0;
       $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/details').then(function (response) {
         $scope.dataDetails = response.data.data;
+        $scope.dataDetailsLoaded = 1;
 
         angular.forEach($scope.dataDetails, function(value, key) {
           if (value.document_id) {
@@ -417,8 +438,10 @@
 
     $scope.getMembers = function() {
 
+      $scope.dataMembersLoaded = 0;
       $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/members').then(function (response) {
         $scope.dataMembers = response.data.data;
+        $scope.dataMembersLoaded = 1;
 
         angular.forEach($scope.dataMembers, function(value, key) {
           $http.get("http://api.ifest-uajy.com/v1/media/"+value.media_id).then(function (response) {
