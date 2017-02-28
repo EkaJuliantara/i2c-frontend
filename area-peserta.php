@@ -106,7 +106,7 @@
                       <td>
                         <a ng-show="data.payment_id != NULL" href="http://api.ifest-uajy.com/storage/media/{{ data.payment_name }}" target="_blank">Lihat</a>
                         
-                        <button ng-show="data.payment_id == NULL && categoryTeam == 1" type="file" ngf-select="uploadPayment($file, $invalidFiles, data.id)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" class="btn">Unggah</button> <span ng-show="data.payment_id == NULL && categoryTeam == 1" class="payment-info {{ data.id }}">Pilih file untuk diunggah</span>
+                        <button ng-show="data.payment_id == NULL && categoryTeam == 1" type="file" ngf-select="uploadPayment($file, $invalidFiles, data.id)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="data.payment_id == NULL && categoryTeam == 1" class="payment-info {{ data.id }}">Pilih file untuk diunggah</span>
                       </td>
                       <td>
                         <span ng-show="data.status == NULL">Menunggu verifikasi...</span>
@@ -288,7 +288,7 @@
 
         var count = $scope.dataDetails.length;
 
-        var row = angular.element('<tr class="new-details"><td ng-show="categoryTeam == 1"><button type="file" ngf-select="uploadDocument($file, $invalidFiles)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" class="btn">Unggah</button> <span>{{ infoDocument }}</span></td><td ng-show="categoryTeam == 2"><button type="file" ngf-select="uploadPayment($file, $invalidFiles)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" class="btn">Unggah</button> <span>{{ infoPayment }}</span></td><td ng-show="categoryTeam == 1"></td><td></td><td><button ng-click="addDetail()" type="button" class="btn">{{ btnSave }}</button></td></tr>');
+        var row = angular.element('<tr class="new-details"><td ng-show="categoryTeam == 1"><button type="file" ngf-select="uploadDocument($file, $invalidFiles)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span>{{ infoDocument }}</span></td><td ng-show="categoryTeam == 2"><button type="file" ngf-select="uploadPayment($file, $invalidFiles)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span>{{ infoPayment }}</span></td><td ng-show="categoryTeam == 1"></td><td></td><td><button ng-click="addDetail()" type="button" class="btn">{{ btnSave }}</button></td></tr>');
 
         $('#detail-list').append(row);
 
@@ -454,7 +454,7 @@
         var count = $scope.dataMembers.length;
 
         if (count != 5) {
-          var row = angular.element('<tr class="new-member"><td><input ng-model="newMembers.members[0][\'full_name\']" type="text" required="" /><br><span>{{ infoFullName }}</span></td><td><button type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB" class="btn">Unggah</button><br><span>{{ infoMedia }}</span></td><td><button ng-click="addMembers()" type="button" class="btn">{{ btnSave }}</button></tr>');
+          var row = angular.element('<tr class="new-member"><td><input ng-model="newMembers.members[0][\'full_name\']" type="text" required="" /><br><span>{{ infoFullName }}</span></td><td><button type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button><br><span>{{ infoMedia }}</span></td><td><button ng-click="addMembers()" type="button" class="btn">{{ btnSave }}</button></tr>');
           $('#member-list').append(row);
           $compile(row)($scope);
         }
