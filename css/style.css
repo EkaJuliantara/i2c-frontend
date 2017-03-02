@@ -428,31 +428,30 @@ button{
 
 .registration-btn {
   display: block;
-      margin: auto;
-      text-decoration: none;
-          width: 50%;
+  margin: auto;
+  text-decoration: none;
+  width: 50%;
 }
-
 
 span.error-msg {
   margin-bottom: 15px;
   display: block;
 }
 
-@media screen and (max-width: 549px) {
-  .four>.big,.big{
-    width: 50%;
-  }
-  .content-text{
-    font-size: 15px;
-  }
-  .registration-btn{
-    font-size: 16px;
-    width: 50%;
-  }
+/*css for login form*/
+#login-form{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
+.columns>.i2c-logo{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 30%;
+}
 
+/*css for responsive*/
 @media screen and (max-width: 890px) {
   .i2c-logo{
     width: 75px;
@@ -472,6 +471,30 @@ span.error-msg {
   }
   .text-link{
     font-size: 15px;
+  }
+  .columns>.i2c-logo{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 210px;
+  }
+  #login-form{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .four>.big,.big{
+    width: 50%;
+  }
+  .content-text{
+    font-size: 15px;
+  }
+  .registration-btn{
+    font-size: 16px;
+    width: 50%;
+  }
+  #login-form{
+    width: 80%;
   }
 }
 
@@ -510,17 +533,4 @@ span.error-msg {
   .content-text{
     font-size: 16px;
   }
-}
-
-/*css for login form*/
-#login-form{
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
-.columns>.i2c-logo{
-  margin-top: 50px;
-  margin-bottom: 10px;
-  width: 350px;
 }
