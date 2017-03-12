@@ -298,7 +298,12 @@
     $scope.getDetail = function() {
       $scope.dataDetailsLoaded = 0;
       $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/details').then(function (response) {
-        $scope.dataDetails = response.data.data;
+        if (response.data.data) {
+          $scope.dataDetails = response.data.data;
+        }else{
+          $scope.dataDetails = 0;
+        }
+        
         $scope.dataDetailsLoaded = 1;
 
         angular.forEach($scope.dataDetails, function(value, key) {
@@ -469,8 +474,12 @@
     $scope.getMembers = function() {
 
       $scope.dataMembersLoaded = 0;
-      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/members').then(function (response) {
-        $scope.dataMembers = response.data.data;
+      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/members').then(function (response) {        
+        if (response.data.data) {
+          $scope.dataMembers = response.data.data;
+        }else{
+          $scope.dataMembers = 0;
+        }
         $scope.dataMembersLoaded = 1;
 
         angular.forEach($scope.dataMembers, function(value, key) {
