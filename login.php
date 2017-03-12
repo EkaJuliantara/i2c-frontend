@@ -38,7 +38,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
 
 </head>
@@ -125,7 +125,7 @@
                       <button ng-disabled="button == 'MASUK...'" type="submit">{{ button }}</button>
                   </div>
                   <span ng-show="errors">{{ errors }}</span>
-              </form>                  
+              </form>
           </div>
         </div>
         <!--<div class="six columns">

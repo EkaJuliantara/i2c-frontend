@@ -25,7 +25,7 @@
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+    <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
   <body>
     <section id="header">
@@ -75,7 +75,7 @@
                   </table>
                   <button type="submit" class="btn">{{ button }}</button>
                 </form>
-              
+
                 <p ng-hide="dataTeamLoaded">Sedang mengambil data dari server. Mohon tunggu sebentar ya...</p>
                 </div>
 
@@ -96,7 +96,7 @@
                         Status
                       </th>
                       <th>
-                        
+
                       </th>
                     </tr>
                   </thead>
@@ -105,7 +105,7 @@
                       <td ng-show="categoryTeam == 1"><a href="http://api.ifest-uajy.com/storage/media/{{ data.document_name }}" target="_blank">Lihat</a></td>
                       <td>
                         <a ng-show="data.payment_id != NULL" href="http://api.ifest-uajy.com/storage/media/{{ data.payment_name }}" target="_blank">Lihat</a>
-                        
+
                         <button ng-show="data.payment_id == NULL && categoryTeam == 1" type="file" ngf-select="uploadPayment($file, $invalidFiles, data.id)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="data.payment_id == NULL && categoryTeam == 1" class="payment-info {{ data.id }}">Pilih file untuk diunggah</span>
                       </td>
                       <td>
@@ -303,7 +303,7 @@
         }else{
           $scope.dataDetails = 0;
         }
-        
+
         $scope.dataDetailsLoaded = 1;
 
         angular.forEach($scope.dataDetails, function(value, key) {
@@ -416,7 +416,7 @@
         }).then(function (response) {
 
           $scope.dataDetail['payment_id'] = response.data.data.id;
-          
+
           $http({
             method  : 'PATCH',
             url     : 'http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/detail/'+id,
@@ -468,13 +468,13 @@
     $scope.uploadFiles = function(file, errFiles) {
         $scope.media = file;
         $scope.errMedia = errFiles && errFiles[0];
-        $scope.infoMedia = $scope.media.name; 
+        $scope.infoMedia = $scope.media.name;
     }
 
     $scope.getMembers = function() {
 
       $scope.dataMembersLoaded = 0;
-      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/members').then(function (response) {        
+      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/members').then(function (response) {
         if (response.data.data) {
           $scope.dataMembers = response.data.data;
         }else{
@@ -541,7 +541,7 @@
                   $scope.getMembers();
                   $scope.infoMedia = "Pilih file untuk diunggah.";
               }
-            });            
+            });
           });
 
         }else{
