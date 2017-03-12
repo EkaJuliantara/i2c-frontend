@@ -211,7 +211,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
 
     $http({
       method  : 'POST',
-      url     : 'http://127.0.0.1:8000/v1/i2c/login',
+      url     : 'http://api.ifest-uajy.com/v1/i2c/login',
       data    : $.param($scope.formData),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -234,7 +234,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
             data    : $.param({ id: response.data.data.id, i2c_category_id: response.data.data.i2c_category_id }),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
           }).then(function(data) {
-            $window.location.href = 'area-peserta.php';
+            //$window.location.href = 'area-peserta.php';
           });
       }
     });
