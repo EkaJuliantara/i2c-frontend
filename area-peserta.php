@@ -183,7 +183,31 @@
 <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
 
 <script>
-  var app = angular.module('i2c2App', ['ngFileUpload']);
+  function httpInterceptor() {
+    return {
+      request: function(config) {
+        return config;
+      },
+
+      requestError: function(config) {
+        return config;
+      },
+
+      response: function(res) {
+        return res;
+      },
+
+      responseError: function(res) {
+        return res;
+      }
+    }
+  }
+
+  var app = angular.module('i2c2App', ['ngFileUpload'])
+    .factory('httpInterceptor', httpInterceptor)
+    .config(function($httpProvider) {
+      $httpProvider.interceptors.push('httpInterceptor');
+    });
 
   app.controller('dataTeamCtrl', function($scope, $http, $timeout, Upload) {
 
@@ -227,13 +251,19 @@
         data    : $.param($scope.dataTeam),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
-      .then(function(data) {
-        if (!data.data.data.hasOwnProperty('exception')) {
-          $scope.button = "Tersimpan";
-          $timeout(function() { $scope.button = "Simpan"; }, 1000);
-        }else{
-          $scope.errors = data.data.data.original.errors[0];
-          $scope.button = "Simpan";
+      .then(function(response) {
+        switch (response.status) {
+          case 400:
+            $scope.errors = response.data.errors;
+            $scope.button = "Simpan";
+          break;
+          case 500:
+            $scope.errors.ise = "Mohon maaf terdapat kesalahan di bagian server.";
+            $scope.button = "DAFTAR";
+            break;
+          default:
+            $scope.button = "Tersimpan";
+            $timeout(function() { $scope.button = "Simpan"; }, 1000);
         }
       });
     }
@@ -486,17 +516,23 @@
               data    : $.param($scope.newMembers),
               headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
              })
-            .then(function(data) {
-              if (!data.data.hasOwnProperty('errors')) {
-                $scope.newMembers = {};
-                $scope.btnSave = "Simpan";
-                $scope.getMembers();
-                $scope.infoMedia = "Pilih file untuk diunggah.";
-              }else{
-                $scope.btnSave = "Simpan";
-                $scope.errors = data.data.errors[0];
+            .then(function(response) {
+              switch (response.status) {
+                case 400:
+                  $scope.errors = response.data.errors;
+                  $scope.btnSave = "Simpan";
+                break;
+                case 500:
+                  $scope.errors.ise = "Mohon maaf terdapat kesalahan di bagian server.";
+                  $scope.button = "DAFTAR";
+                  break;
+                default:
+                  $scope.newMembers = {};
+                  $scope.btnSave = "Simpan";
+                  $scope.getMembers();
+                  $scope.infoMedia = "Pilih file untuk diunggah.";
               }
-            });
+            });            
           });
 
         }else{
