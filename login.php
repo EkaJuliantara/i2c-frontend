@@ -112,21 +112,20 @@
     <div class="container">
         <div class="twelve columns">
             <div id="login-form">
-                  <form ng-submit="loginSubmit()" class="form-login">
-                      <div class="form-row">
-                          <label>Email</label>
-                          <input ng-model="formData.email" type="email" name="email" value="" required="">
-                      </div>
-                      <div class="form-row">
-                          <label>Kata Sandi</label>
-                          <input ng-model="formData.password" type="password" name="password" value="" required="">
-                      </div>
-                      <div class="form-row">
-                          <button ng-disabled="button == 'MASUK...'" type="submit">{{ button }}</button>
-                      </div>
-                      <span ng-show="errors">{{ errors }}</span>
-                  </form>
-                  
+              <form ng-submit="loginSubmit()" class="form-login">
+                  <div class="form-row">
+                      <label>Email</label>
+                      <input ng-model="formData.email" type="email" name="email" value="" required="">
+                  </div>
+                  <div class="form-row">
+                      <label>Kata Sandi</label>
+                      <input ng-model="formData.password" type="password" name="password" value="" required="">
+                  </div>
+                  <div class="form-row">
+                      <button ng-disabled="button == 'MASUK...'" type="submit">{{ button }}</button>
+                  </div>
+                  <span ng-show="errors">{{ errors }}</span>
+              </form>                  
           </div>
         </div>
         <!--<div class="six columns">
@@ -212,7 +211,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
 
     $http({
       method  : 'POST',
-      url     : 'http://api.ifest-uajy.com/v1/i2c/login',
+      url     : 'http://127.0.0.1:8000/v1/i2c/login',
       data    : $.param($scope.formData),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -232,7 +231,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
           $http({
             method  : 'POST',
             url     : 'proses-login.php',
-            data    : $.param({ id: response.data.id, i2c_category_id: response.data.i2c_category_id }),
+            data    : $.param({ id: response.data.data.id, i2c_category_id: response.data.data.i2c_category_id }),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
           }).then(function(data) {
             $window.location.href = 'area-peserta.php';
