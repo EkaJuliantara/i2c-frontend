@@ -216,7 +216,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
       data    : $.param($scope.formData),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
-    .then(function(data) {
+    .then(function(response) {
       switch (response.status) {
         case 400:
           $scope.errors = response.data.errors;
