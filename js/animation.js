@@ -1,5 +1,10 @@
 $(document).ready(function() {
-
+  $.magnificPopup.open({
+     items: {
+         src: '#announcement'
+     },
+     type: 'inline'
+   });
   $('.flexslider').flexslider({
     animation: "slide"
   });
