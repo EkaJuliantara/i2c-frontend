@@ -166,6 +166,9 @@
               <div class="box-body">
                 <p>Kecepatan koneksi internet mempengaruhi cepatnya data ditampilkan. Apabila data belum tertampil, silakan muat ulang halaman.</p>
                 <p>Kami menyarankan menggunakan browser Mozilla Firefox</p>
+                <p>Diberitahukan kepada seluruh perserta i2c kategori ide aplikasi mobile, bahwa batas pengumpulan proposal diundur sampai tanggal 8 April 2017. Bagi peserta yang sudah mendaftar jangan lupa juga untuk melengkapi data-data diri ya</p>
+                <p>Untuk kategori FTI Promotional Video, batas pengumpulan video juga diundur sampai tanggal 28 April 2017. Pada tanggal 19-27 April 2017, peserta sudah diijinkan untuk mengambil video di seluruh Lab. FTI dengan membawa surat pernyataan peserta yang bisa diambil di stand iFest atau bisa meminta surat tersebut ke panitia iFest.</p>
+                <p>Untuk mengambil surat pernyataan peserta ini, peserta harus melakukan pelunasan terlebih dahulu dan membawa bukti pembayarannya pada saat meminta surat.</p>
               </div>
             </div>
           </div>
