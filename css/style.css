@@ -41,7 +41,7 @@ section{
 }
 
 /*set padding for sections*/
-#category,#winner,#winner-profile,#about,#footer,#rule,#timeline{
+#category,#winner,#winner-profile,#about,#footer,#rule,#timeline,#finalist{
   padding-top: 40px;
   padding-bottom: 50px;
 }
@@ -533,4 +533,10 @@ span.error-msg {
   .content-text{
     font-size: 16px;
   }
+}
+
+/*css for finalist section */
+#finalist,#finalist>h2{
+  background-color: #22313F;
+  color: white;
 }
