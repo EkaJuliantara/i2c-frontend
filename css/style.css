@@ -540,3 +540,7 @@ span.error-msg {
   background-color: #22313F;
   color: white;
 }
+
+#finalist .finalist{
+  width: 100%;
+}
