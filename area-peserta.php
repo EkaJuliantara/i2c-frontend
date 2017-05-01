@@ -75,8 +75,8 @@
                     <tr>
                       <th>Vegetarian</th>
                       <td>
-                        <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value="1" /> Iya
-                        <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value="0" /> Tidak
+                        <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value='"1"' /> Iya
+                        <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value='"0"' /> Tidak
                       </td>
                     </tr>
                   </table>
