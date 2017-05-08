@@ -72,6 +72,7 @@
                       <th>Kategori Lomba</th>
                       <td>{{ dataTeam.category.name }}</td>
                     </tr>
+                    <!--
                     <tr>
                       <th>Vegetarian</th>
                       <td>
@@ -79,6 +80,7 @@
                         <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value='"0"' /> Tidak
                       </td>
                     </tr>
+                  -->
                   </table>
                   <button type="submit" class="btn">{{ button }}</button>
                 </form>
@@ -154,6 +156,8 @@
                       </td>
                       <td>
                         <button ng-hide="hideMember == data.id" ng-click="hidingUpdateMember(data.id)" type="button" class="btn">Sunting</button> <button ng-show="hideMember == data.id" ng-click="updateMember(data)" type="button" class="btn">{{ btnUpdate }}</button> <button ng-click="destroyMember(data.id)" type="button" class="btn delete-member {{ data.id }}">Hapus</button>
+                        <button ng-show="data.vegetarian == 1" ng-click="uodateVegetarian(data)" type="button" class="btn">Vegetarian</button>
+                        <button ng-show="data.vegetarian == 0" ng-click="updateVegetarian(data)" type="button" class="btn">Tidak Vegetarian</button>
                       </td>
                     </tr>
                   </tbody>
