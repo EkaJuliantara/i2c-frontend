@@ -480,6 +480,20 @@ app.controller('dataMembersCtrl', function($scope, $http, $compile, $timeout, Up
     });
   }
 
+  $scope.updateVegetarian = function(data) {
+    if(data.vegetarian == 0){
+      data.vegetarian = 1;
+    } else {
+      data.vegetarian = 0;
+    }
+    $http({
+      method : 'PATCH',
+      url     : base_url+'/'+$scope.idTeam+'/members/'+data.id,
+      data    : $.param(data),
+      headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    });
+  }
+
   $scope.hidingUpdateMember = function(id) {
     $scope.hideMember = id;
   }
